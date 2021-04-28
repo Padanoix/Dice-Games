@@ -1,0 +1,129 @@
+body {
+    background-image: linear-gradient(rgba(67, 93, 211, 0.4), rgba(95, 103, 226, 0.4)), url(image/back.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: Lato;
+    font-weight: 400;
+    position: relative;
+    height: 100vh;
+    color: #555;
+}
+
+.White-board {
+    width: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(174, 210, 245);
+}
+
+.P1-board,
+.P2-board {
+    width: 50%;
+    height: 650px;
+    float: left;    
+    padding: 100px;
+}
+
+.P-name {
+    color: rgb(255, 0, 0);
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 100;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.P-score {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 100;
+    color: #4d50eb;
+    margin-bottom: 130px;
+}
+
+.Score-box {
+    background-color: #4d50eb;
+    color: rgb(255, 0, 0);
+    width: 55%;
+    margin: 0 auto;
+    padding: 12px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.P-current {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+}
+
+.P-current-score {
+    font-size: 47px;
+}
+
+button {
+    position: absolute;
+    width: 200px;
+    left: 48%;
+    transform: translateX(-50%);
+    color: rgb(27, 12, 12);
+    background: none;
+    border: none;
+    font-family: Lato;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover { font-weight: 600; }
+button:hover i { margin-right: 20px; }
+
+button:focus {
+    outline: none;
+}
+
+ion-icon {
+    color: #e91414;
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 32px;
+    line-height: 1;
+    vertical-align: text-top;
+    margin-top: -4px;
+    transition: margin 0.3s;
+}
+
+.active { background-color: #ffffff; }
+.active .P-name { font-weight: 700; }
+
+.active .P-name::after {
+    content: "\01F3AF";
+    font-size: 47px;
+    position: absolute;
+    color: #4d50eb;
+    top: -1px;
+    right: -20px;
+    
+}
+
+.btn-new { top: 45px;}
+.btn-rules {top: 85px}
+.btn-roll { top: 403px;}
+.btn-hold { top: 467px;}
+
+.dice {
+    position: absolute;
+    left: 50%;
+    top: 178px;
+    transform: translateX(-50%);
+    height: 100px;
+}
+
+.winner { background-color: #f7f7f7; }
+.winner .player-name { font-weight: 400; color: #EB4D4D; }

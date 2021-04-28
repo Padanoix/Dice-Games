@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<!-- //////////////////////////////////////////META///////////////////////////////////////////////////// !-->   
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- //////////////////////////////////////////META///////////////////////////////////////////////////// !-->
+    <title>Dice Game</title>
+<!-- //////////////////////////////////////////LINK///////////////////////////////////////////////////// !-->  
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+    <link rel="stylesheet" href="style.css"/>
+<!-- //////////////////////////////////////////LINK///////////////////////////////////////////////////// !-->
+  </head>
+  <body>
+
+    <div class="White-board">
+
+      <div class="P1-board active">
+        <div class="P-name"><ion-input placeholder="Player 1"></ion-input></div>
+        <div class="P-score">0</div>
+        <div class="Score-box">
+          <div class="P-current">Score en cours</div>
+          <div class="P-current-score" id="PCS1">0</div>
+        </div>
+      </div>
+
+      <img src="" alt="" class="Dice">
+
+      <div class="P2-board">
+        <div class="P-name"><ion-input placeholder="Player 2"></ion-input></div>
+        <div class="P-score">0</div>
+        <div class="Score-box">
+          <div class="P-current">Score en cours</div>
+          <div class="P-current-score" id="PCS2">0</div>
+      </div>
+
+      <button class="btn-rules"><ion-icon name="book-outline"></ion-icon>Rules</button>
+      <button class="btn-new"><ion-icon name="add-circle-outline"></ion-icon>New game</button>
+      <button class="btn-roll"><ion-icon name="reload-outline"></ion-icon>Roll dice</button>
+      <button class="btn-hold"><ion-icon name="duplicate-outline"></ion-icon>Hold</button>
+    </div>
+
+    <!-- //////////////////////////////////////////SCRIPT///////////////////////////////////////////////////// !-->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="script.js"></script>
+    <!-- //////////////////////////////////////////SCRIPT///////////////////////////////////////////////////// !-->
+  </body>
+</html>
+
