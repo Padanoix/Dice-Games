@@ -16,6 +16,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgb(174, 210, 245);
+    overflow: hidden;
 }
 
 .P1-board,
@@ -122,7 +123,8 @@ ion-icon {
     left: 50%;
     top: 178px;
     transform: translateX(-50%);
-    height: 100px;
+    height: 150px;
+    border-radius: 10px;
 }
 
 .winner { background-color: #f7f7f7; }
