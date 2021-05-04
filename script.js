@@ -5,11 +5,7 @@ var roundscore1 = 0;
 var roundscore2 = 0;
 const player1 = 0;
 const player2 = 1;
-var activeplayer;
-
-
-
-
+var activeplayer = 0;
 
 //btn rules = montre les règles du jeu //
 document.querySelector('.btn-rules').addEventListener('click', rules);
@@ -43,23 +39,17 @@ function roll(){
     diceface.src = 'image/dice-' + dice + '.png';
 
     //add current score//
-    if(activeplayer === 0){
-        if (dice !== 1) {
-            roundscore1 += dice;
-            document.getElementById('PCS1').textContent = roundscore1;
-        } else {
-            nextplayer();
-        }  
-    }
-    if(activeplayer === 1){
-        if (dice !== 1) {
+    if (dice !== 1) {
+        if(activeplayer === 1){
             roundscore2 += dice;
-            document.getElementById('PCS2').textContent = roundscore2;
-        } else {
-            nextplayer();
-        }
+            document.getElementById('PCS2').textContent = roundscore2;}
+        if(activeplayer === 0){
+            roundscore1 += dice;
+            document.getElementById('PCS1').textContent = roundscore1;}
     }
-    
+    else {
+        nextplayer();
+    }  
 }
 
 //btn hold = sauvegarde le score//
@@ -100,14 +90,14 @@ function nextplayer(){
     document.querySelector('.dice').style.display = 'none';
 
     if(activeplayer === 0){
-        document.querySelector('.P1-board').classList.toggle('active');
-        document.querySelector('.P2-board').classList.remove('active');
+        document.querySelector('.P2-board').classList.toggle('active');
+        document.querySelector('.P1-board').classList.remove('active');
         activeplayer = player2
         roundscore1 = 0
     }
     else {
-        document.querySelector('.P2-board').classList.toggle('active');
-        document.querySelector('.P1-board').classList.remove('active');
+        document.querySelector('.P1-board').classList.toggle('active');
+        document.querySelector('.P2-board').classList.remove('active');
         activeplayer = player1
         roundscore2 = 0
     }
